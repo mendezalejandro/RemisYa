@@ -33,7 +33,7 @@ class Modificacion implements OperacionState
     {
 
         $connection = \Yii::$app->db;
-        $model = $connection->createCommand('CALL unaj_proyecto.'.$this->storeProcedureName.'('.$this->stringParametros.');');
+        $model = $connection->createCommand('CALL '.$this->storeProcedureName.'('.$this->stringParametros.');');
         $info = $model->queryAll();
 
 
